@@ -32,43 +32,50 @@ function playRound(){
     if(humanChoiceToLowercase === "rock"  && computerChoiceToLowercase === "paper"){
         round++;
         computerScore++;
-        return `Computer wins! ${computerChoiceToLowercase} beats ${humanChoiceToLowercase}.`
+        console.log(`Computer wins! ${computerChoiceToLowercase} beats ${humanChoiceToLowercase}.`)
+        return `Computer wins! ${computerChoiceToLowercase} beats ${humanChoiceToLowercase}.`;
     }
 
     else if(humanChoiceToLowercase === "rock"  && computerChoiceToLowercase === "scissors"){
         round++;
         humanScore++;
-        return `Player wins! ${humanChoiceToLowercase} beats ${computerChoiceToLowercase}.`
+        console.log(`Player wins! ${humanChoiceToLowercase} beats ${computerChoiceToLowercase}.`)
+        return `Player wins! ${humanChoiceToLowercase} beats ${computerChoiceToLowercase}.`;
     }
 
     else if(humanChoiceToLowercase === "scissors"  && computerChoiceToLowercase === "paper"){
         round++;
         humanScore++;
-        return `Player wins! ${humanChoiceToLowercase} beats ${computerChoiceToLowercase}.`
+        console.log(`Player wins! ${humanChoiceToLowercase} beats ${computerChoiceToLowercase}.`);
+        return `Player wins! ${humanChoiceToLowercase} beats ${computerChoiceToLowercase}.`;
     }
 
     else if(humanChoiceToLowercase === "scissors"  && computerChoiceToLowercase === "rock"){
         round++;
         computerScore++;
-        return `Computer wins! ${computerChoiceToLowercase} beats ${humanChoiceToLowercase}.`
+        console.log(`Computer wins! ${computerChoiceToLowercase} beats ${humanChoiceToLowercase}.`);
+        return `Computer wins! ${computerChoiceToLowercase} beats ${humanChoiceToLowercase}.`;
     }
 
     else if(humanChoiceToLowercase === "paper"  && computerChoiceToLowercase === "rock"){
         round++;
         humanScore++;
-        return `Player wins! ${humanChoiceToLowercase} beats ${computerChoiceToLowercase}.`
+        console.log(`Player wins! ${humanChoiceToLowercase} beats ${computerChoiceToLowercase}.`);
+        return `Player wins! ${humanChoiceToLowercase} beats ${computerChoiceToLowercase}.`;
     }
 
     // cases where computer wins over player
     else if(humanChoiceToLowercase === "paper"  && computerChoiceToLowercase === "scissors"){
         round++;
         computerScore++;
-        return `Computer wins! ${computerChoiceToLowercase} beats ${humanChoiceToLowercase}.`
+        console.log(`Computer wins! ${computerChoiceToLowercase} beats ${humanChoiceToLowercase}.`);
+        return `Computer wins! ${computerChoiceToLowercase} beats ${humanChoiceToLowercase}.`;
     }
 
     // In case of a tie
     else{
         round++;
+        console.log("It's a tie.");
         return "It's a tie";
     }
 
