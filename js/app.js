@@ -2,7 +2,7 @@ const compChoices = ["rock", "scissors", "paper"];
 
 function getComputerChoice(){
     let randoNum = Math.floor(Math.random() * ((compChoices.length) - 1));
-    console.log("The computer choice " + randoNum);
+    console.log("The computer chose " + compChoices[randoNum]);
     return compChoices[randoNum];
 }
 
@@ -25,7 +25,7 @@ let computerScore = 0;
 
 let round = 0;
 
-function playRound(getHumanChoice,getComputerChoice){
+function playRound(){
     let humanChoiceToLowercase = getHumanChoice().toLowerCase();
     let computerChoiceToLowercase = getComputerChoice().toLowerCase();
 
@@ -67,7 +67,7 @@ function playRound(getHumanChoice,getComputerChoice){
     }
 
     // In case of a tie
-    else(humanChoiceToLowercase === computerChoiceToLowercase){
+    else{
         round++;
         return "It's a tie";
     }
@@ -77,22 +77,24 @@ function playRound(getHumanChoice,getComputerChoice){
 
 function playGame(){
     while(round < 3){
-        playRound(getHumanChoice(),getComputerChoice());
+        playRound();
+
+        if(humanScore > computerScore){
+            console.log("You win the game!")
+            return "You win the game!";
+        }
+        else{
+            console.log("You lose the game!")
+            return "You lose the game!";
+        }
     }
 
-    if(humanScore > computerScore){
-        console.log("You win the game!")
-        return "You win the game!";
-    }
-    else{
-        console.log("You lose the game!")
-        return "You lose the game!"
-    }
+   
 }
 
 function main(){
-    getHumanChoice();
-    getComputerChoice;
     playGame();
 }
+
+console.log(main());
 
