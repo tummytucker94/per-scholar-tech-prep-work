@@ -1,8 +1,8 @@
 const compChoices = ["rock", "scissors", "paper"];
 
 function getComputerChoice(){
-    let randoNum = Math.floor(Math.random() * ((compChoices.length) - 1));
-    console.log("The computer chose " + compChoices[randoNum]);
+    let randoNum = Math.floor(Math.random() * compChoices.length);
+    console.log("The computer chose: " + compChoices[randoNum]);
     return compChoices[randoNum];
 }
 
@@ -85,23 +85,24 @@ function playRound(){
 function playGame(){
     while(round < 3){
         playRound();
-
-        if(humanScore > computerScore){
-            console.log("You win the game!")
-            return "You win the game!";
-        }
-        else{
-            console.log("You lose the game!")
-            return "You lose the game!";
-        }
+        console.log(`Round: ${round}.`);
+        console.log("Your Score: " + humanScore)
+        console.log("Computer Score: " + computerScore)
     }
 
-   
+    if(humanScore > computerScore){
+        console.log("You win the game!")
+        return "You win the game!";
+    }
+
+    else{
+        console.log("You lose the game!")
+        return "You lose the game!";
+    }
 }
 
 function main(){
     playGame();
 }
 
-console.log(main());
-
+main();
